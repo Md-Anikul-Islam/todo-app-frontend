@@ -26,7 +26,7 @@ export const auth = {
     actions:{
         REGISTRATION(context,resData){
             return new Promise((resolve, reject)=>{
-                axios.post('/register',resData)
+                axios.post('/registration',resData)
                     .then((res) => {
                         context.commit('SET_AUTH_TOKEN',res.data.token)
                         context.commit('SET_AUTH_INFO',res.data.user)

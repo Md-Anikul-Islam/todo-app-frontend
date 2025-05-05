@@ -83,6 +83,12 @@
                 <label>Details</label>
                 <textarea class="form-control" v-model="currentTask.details"></textarea>
               </div>
+
+              <div class="form-group">
+                <label>Marks</label>
+                <input type="text" class="form-control" v-model="currentTask.marks">
+              </div>
+
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" @click="closeModal">Close</button>
                 <button type="submit" class="btn btn-primary">
@@ -110,7 +116,8 @@ export default {
       currentTask: {
         id: null,
         title: '',
-        details: ''
+        details: '',
+        marks: ''
       }
     };
   },
